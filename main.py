@@ -133,7 +133,7 @@ def file_info(filename):
             'download_url': f'/download/{filename}'
         })
     
-    except Exception as e:
+    except Exception as e: 
         if hasattr(e, 'code'):
             raise e
         return jsonify({'error': str(e)}), 500
